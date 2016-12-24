@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<a href="#" style="position: absolute; top:0; z-index: 1000;">点我点我</a>
+<p style="position: absolute; top:0; z-index: 1000; right: 0;">CLCK</p>
+ <div class="coin-animate-wrap">
+     <div class="coin-animate coin-animateIn">
+
+     </div>
+ </div>
+ <script src="jquery-1.11.0.min.js">
+
+ </script>
+ <script>
+
+     $(function(){
+         $('a').click(function (){
+             $('.coin-animate').removeClass('coin-animateIn').addClass('coin-animateIng');
+         })
+         $('p').click(function (){
+             $('.coin-animate').removeClass('coin-animateIng').addClass('coin-animateOut');
+         })
+     })
+ </script>
+</body>
+</html>

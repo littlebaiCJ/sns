@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电脑公屏</title>
+    <link rel="stylesheet" type="text/css" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" type="text/css" href="css/pc-screen.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+</head>
+<body style="background: url('images/pcbg.jpg')">
+<!--聊天公屏主内容 start-->
+<div class="pc-container" style="background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.701961));">
+    <!--小喇叭 start-->
+    <div class="horn hide">
+        <canvas id="canvas"></canvas>
+        <img src="images/tx.jpg" alt=""> <span class="horn-name">Cl 彩林<span class="horn-time">10秒前</span></span>
+        <p class="horn-text">人生若只如初见，何事秋风悲画扇。 —— 纳兰性德人生若只如初见，何事秋风悲画扇。 —— 纳兰性德人生若只如初见，何事秋风悲画扇。 —— 纳兰性德</p>
+        <span class="iconfont icon-bullhorn"></span>
+    </div>
+    <!--小喇叭 end-->
+    <!--聊天层 start-->
+    <div class="chat-content">
+        <div class="toolbar messagebar hide" style="position:fixed;bottom: 0;">
+            <div class="toolbar-inner">
+                <textarea placeholder="Message" class=""></textarea>
+                <a href="#" class="link">Send</a>
+            </div>
+        </div>
+        <div data-page="messages" class="page no-toolbar toolbar-fixed page-on-center">
+            <div id="chat-content" class="page-content messages-content">
+                <div class="messages messages-auto-layout">
+                    <div class="message message-received  message-with-avatar message-appear-from-bottom message-last message-with-tail message-first">
+                        <div class="message-name">Kate</div>
+                        <div class="message-text">是的是的多多</div>
+                        <div class="message-avatar" style="background-image:url(http://lorempixel.com/output/people-q-c-100-100-9.jpg)"></div>
+                    </div>
+                    <div class="message message-received  message-with-avatar message-appear-from-bottom message-last message-with-tail message-first">
+                        <div class="message-name">Kate</div>
+                        <div class="message-text">是的是的多多</div>
+                        <div class="message-avatar" style="background-image:url(http://lorempixel.com/output/people-q-c-100-100-9.jpg)"></div>
+                    </div>
+                    <div class="message message-received  message-with-avatar message-appear-from-bottom message-last message-with-tail message-first">
+                        <div class="message-name">Kate</div>
+                        <div class="message-text">是的是的多多</div>
+                        <div class="message-avatar" style="background-image:url(http://lorempixel.com/output/people-q-c-100-100-9.jpg)"></div>
+                    </div>
+                    <div class="message message-received  message-with-avatar message-appear-from-bottom message-last message-with-tail message-first">
+                        <div class="message-name">Kate</div>
+                        <div class="message-text">是的是的多多</div>
+                        <div class="message-avatar" style="background-image:url(http://lorempixel.com/output/people-q-c-100-100-9.jpg)"></div>
+                    </div>
+                    <div class="message message-received  message-with-avatar message-appear-from-bottom message-last message-with-tail message-first">
+                        <div class="message-name">Kate</div>
+                        <div class="message-text">是的是的多多</div>
+                        <div class="message-avatar" style="background-image:url(http://lorempixel.com/output/people-q-c-100-100-9.jpg)"></div>
+                    </div>
+                    <div class="message message-received  message-with-avatar message-appear-from-bottom message-last message-with-tail message-first">
+                        <div class="message-name">Kate</div>
+                        <div class="message-text">是的是的多多</div>
+                        <div class="message-avatar" style="background-image:url(http://lorempixel.com/output/people-q-c-100-100-9.jpg)"></div>
+                    </div>
+                    <div class="message message-received  message-with-avatar message-appear-from-bottom message-last message-with-tail message-first">
+                        <div class="message-name">Kate</div>
+                        <div class="message-text">是的是的多多</div>
+                        <div class="message-avatar" style="background-image:url(http://lorempixel.com/output/people-q-c-100-100-9.jpg)"></div>
+                    </div>
+                    <div class="message message-received  message-with-avatar message-appear-from-bottom message-last message-with-tail message-first gift-chat-message">
+                        <div class="message-name">Kate</div>
+                        <div class="message-text">送木木木
+                        </div>
+                        <div class="message-avatar" style="background-image:url(http://lorempixel.com/output/people-q-c-100-100-9.jpg)"></div>
+                        <div class="g-wine">
+                            <img src="images/wine_s.png" alt="">
+                            <strong>x1</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--聊天层 end-->
+    <!--土豪榜 start-->
+    <div class="rank-content">
+        <div class="rank-title">
+            <span class="iconfont icon-huangguantongyidaxiao"></span> <span>土豪榜</span>
+        </div>
+        <ul id="rank">
+            <li class="top1">
+                <img src="images/tx.jpg" alt="">
+                <p><i class="pc-trophy iconfont icon-jiangbei2"></i><span>玻璃猫charming</span></p>
+                <span class="pc-num"><img src="images/zs_03.png" alt=""><i>976</i></span>
+            </li>
+            <li>
+                <i>2</i> <span><img src="images/tx.jpg" alt=""></span>
+                <span>
+                    <span class="pc-name">蓝胖子</span>
+                    <span class="pc-num"><img src="images/zs_03.png" alt=""><i>976</i></span>
+                </span>
+            </li>
+            <li>
+                <i>3</i>
+                <span><img src="images/tx.jpg" alt=""></span>
+                <span>
+                    <span class="pc-name">蓝胖子</span>
+                    <span class="pc-num">976</span>
+                </span>
+            </li>
+            <li>
+                <i>3</i> <span><img src="images/tx.jpg" alt=""></span> <span>
+                    <span class="pc-name">蓝胖子</span>
+                    <span class="pc-num">976</span>
+                </span>
+            </li>
+            <li>
+                <i>3</i> <span><img src="images/tx.jpg" alt=""></span> <span>
+                    <span class="pc-name">蓝胖子</span>
+                    <span class="pc-num">976</span>
+                </span>
+            </li>
+            <li>
+                <i>3</i> <span><img src="images/tx.jpg" alt=""></span> <span>
+                    <span class="pc-name">蓝胖子</span>
+                    <span class="pc-num">976</span>
+                </span>
+            </li>
+            <li>
+                <i>3</i> <span><img src="images/tx.jpg" alt=""></span> <span>
+                    <span class="pc-name">蓝胖子</span>
+                    <span class="pc-num">976</span>
+                </span>
+            </li>
+            <li>
+                <i>3</i> <span><img src="images/tx.jpg" alt=""></span> <span>
+                    <span class="pc-name">蓝胖子</span>
+                    <span class="pc-num">976</span>
+                </span>
+            </li>
+            <li>
+                <i>3</i> <span><img src="images/tx.jpg" alt=""></span> <span>
+                    <span class="pc-name">蓝胖子</span>
+                    <span class="pc-num">976</span>
+                </span>
+            </li>
+            <li>
+                <i>3</i> <span><img src="images/tx.jpg" alt=""></span> <span>
+                    <span class="pc-name">蓝胖子</span>
+                    <span class="pc-num">976</span>
+                </span>
+            </li>
+            <li>
+                <i>3</i> <span><img src="images/tx.jpg" alt=""></span> <span>
+                    <span class="pc-name">蓝胖子</span>
+                    <span class="pc-num">976</span>
+                </span>
+            </li>
+            <li>
+                <i>3</i> <span><img src="images/tx.jpg" alt=""></span> <span>
+                    <span class="pc-name">蓝胖子</span>
+                    <span class="pc-num">976</span>
+                </span>
+            </li>
+            <li>
+                <i>3</i> <span><img src="images/tx.jpg" alt=""></span> <span>
+                    <span class="pc-name">蓝胖子</span>
+                    <span class="pc-num">976</span>
+                </span>
+            </li>
+            <li>
+                <i>3</i> <span><img src="images/tx.jpg" alt=""></span> <span>
+                    <span class="pc-name">蓝胖子</span>
+                    <span class="pc-num"><i>976</i><img src="images/zs_03.png" alt=""></span>
+                </span>
+            </li>
+        </ul>
+    </div>
+    <!--土豪榜 end-->
+</div>
+<!--聊天公屏主内容 end-->
+<!--二维码图标 start-->
+<span title="二维码" class="iconfont icon-erweima"></span>
+<!--二维码图标 end-->
+<!--屏幕图标 start-->
+<span title="开/关屏幕" class="iconfont icon-kaiguan"></span>
+<!--屏幕图标 end-->
+<!--退出图标 start-->
+<span title="退出" class="iconfont icon-tuichu"></span>
+<!--退出图标 end-->
+<!--二维码弹出层 start-->
+<div class="code-popup hide">
+    <div class="code-popup-wrap">
+        <img src="images/er.png" alt="">
+        <p>扫描二维码或搜索 <br> "汕头苏荷酒吧" <br> 进入聊天室</p>
+    </div>
+</div>
+<!--二维码弹出层 end-->
+<!-------------------------------------动画页面------------------------------------------->
+<!--<div class="gift-classify hide">
+    <img src="images/tx.jpg" alt=""> <span class="g-name">木木送玻璃猫</span> <span class="g-num">1辆超跑</span>
+    <div class="g-img-num g-wine">
+        <img src="images/wine_s.png" alt=""> <strong>x1</strong>
+    </div>
+</div>-->
+<span class="gift-num gift-num-animate hide">X1</span>
+<div class="sender hide">
+    <img src="images/tx.jpg" alt="">
+    <p> <span class="sender-name">穆</span></p>
+</div>
+<p class="song-word hide">送</p>
+<div class="gainer hide">
+    <p><span class="gainer-name">穆亩穆</span></p>
+    <img src="images/tx.jpg" alt="">
+</div>
+<!--黄瓜动画 start-->
+<div class="cucumber-animate-wrap hide">
+    <div id="ani" class="cucumber-animate cucumber-animateIn"></div>
+</div>
+<!--火箭动画 start-->
+<div class="rocket-animate-wrap hide">
+    <div class="rocket-animate rocket-animateIn"></div>
+</div>
+<!--啤酒动画 start-->
+<div class="wine-animate-wrap hide">
+    <div class="wine-animate wine-animateIn"></div>
+</div>
+<!--飞机动画 start-->
+<div class="plane-animate-wrap hide">
+    <img class="plane-animate plane-animateIn" src="images/plane/plane.png" alt="">
+</div>
+<!--小熊动画 start-->
+<div class="dolls-animate-wrap hide">
+    <div class="dolls-animate dolls-animateIng"></div>
+</div>
+<!--甜甜圈动画 start-->
+<div class="ttq-animate-wrap hide">
+    <img class="ttq-animate ttq-animateIn" src="images/ttq/ttq.png" alt="">
+</div>
+<!--车-->
+<div class="car-animate-wrap hide">
+    <div class="car-animate"></div>
+</div>
+<!--金币-->
+<div class="coin-animate-wrap hide">
+    <div class="coin-animate">
+    </div>
+</div>
+<!--黑包-->
+<div class="blackpacket-wrap hide">
+    <div class="in-blackpacket-wrap">
+        <div class="blackpacket-user">
+            <img src="images/tx4.jpg" alt="">
+            <p>Moya</p>
+        </div>
+        <div class="img-wrap">
+            <p>恭喜发财，大吉大利</p>
+        </div>
+        <div class="surplus-time">
+            <p class="blackpacket-num">还剩下<span class="text-effect">15</span>个黑包</p>
+            <p class="blackpacket-time">还剩下<span class="text-effect">30</span>秒</p>
+        </div>
+    </div>
+</div>
+<script src="js/pc-rem.js"></script>
+<script src="js/framework7.min.js"></script>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/canvas.js"></script>
+<script src="js/blackpacket.js"></script>
+<script>
+    var myApp = new Framework7();
+    $$ = Dom7;
+    var onoff = true;
+    // 会话flag
+    var conversationStarted = false;
+
+    // Init Messages
+    var myMessages = myApp.messages('.messages', {
+        autoLayout : true
+    });
+
+    // Init Messagebar
+    var myMessagebar = myApp.messagebar('.messagebar');
+
+    // Handle message
+    $$('.messagebar .link').on('click', function(){
+        // Message text
+        var messageText = myMessagebar.value().trim();
+        // Exit if empy message
+        if(messageText.length === 0) return;
+
+        // Empty messagebar
+        myMessagebar.clear();
+
+        // 随机消息类型
+        var messageType = (['sent', 'received'])[Math.round(Math.random())];
+
+        // 接收的消息的头像和名称
+        var avatar, name;
+        if(messageType === 'received'){
+            avatar = 'http://lorempixel.com/output/people-q-c-100-100-9.jpg';
+            name = 'Kate';
+        }
+
+        // Add message
+        myMessages.addMessage({
+            // Message text
+            text : '是的是的多多',
+            // 随机消息类型
+            type : messageType,
+            // 头像和名称
+            avatar : avatar,
+            name : name,
+            // 日期
+            day : !conversationStarted ? 'Today' : false,
+            time : !conversationStarted ? (new Date()).getHours() + ':' + (new Date()).getMinutes() : false
+        })
+
+        // 更新会话flag
+        conversationStarted = true;
+    });
+    $$('.icon-kaiguan').click(function(){
+        if(onoff){
+            $$('.pc-container').addClass('close-animate-out');
+            $$('.pc-container').removeClass('close-animate-in');
+            onoff = !onoff;
+        } else {
+            $$('.pc-container').addClass('close-animate-in');
+            $$('.pc-container').removeClass('close-animate-out');
+            onoff = !onoff;
+        }
+    })
+    $$('.icon-erweima').click(function(){
+        $$('.code-popup').removeClass('hide');
+        $$('.code-popup-wrap').addClass('bounceindown');
+    })
+    $$('.code-popup').click(function(){
+        $$(this).addClass('hide');
+        $$('.code-popup-wrap').addClass('bounceoutdown');
+    })
+</script>
+
+<script>
+    /*二维码快捷键*/
+    $(document).keyup(function(event){
+        var keycode = event.which;
+        if(keycode==81){
+            $$('.code-popup').removeClass('hide');
+            $$('.code-popup-wrap').addClass('bounceindown');
+        }
+    })
+</script>
+<script>
+    /*黑包倒倒计时*/
+    $(function (){
+        var val=$('.blackpacket-time').find('span').html();
+        var val_num=parseInt(val);
+        setInterval(function (){
+            val--;
+            if(val<=0){
+                val=0;
+                $('.blackpacket-time').find('span').removeClass('text-effect');
+            }
+            $('.blackpacket-time').find('span').html(val);
+        },1000);
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>公屏登录</title>
+    <link rel="stylesheet" type="text/css" href="css/pc-screen.css">
+</head>
+<body>
+<div class="login-wrap scan-code-wrap">
+    <div class="scan-code-login">
+        <a href="javascript:void(0)" class="iconfont icon-iconfontcolor11"></a>
+        <p>扫码登录:</p>
+        <img src="images/er.png" alt="">
+        <span class="tips">等待用户扫码</span>
+        <p><span>点击右上角</span>切换密码登录</p>
+    </div>
+    <div class="password-login">
+        <a href="javascript:void(0)" class="iconfont icon-erweima"></a>
+        <p>密码登录:</p>
+        <input type="password" placeholder="请输入密码……"/>
+        <div class="alert alert-danger" role="alert">密码错误！</div>
+        <button>登录</button>
+        <p><span>点击右上角</span>切换扫码登录</p>
+    </div>
+</div>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script>
+    $(function(){
+        var onOff=true;
+        $('a.iconfont').click(function(e){
+            e.preventDefault();
+            if(onOff){
+                $('.login-wrap').removeClass('scan-code-wrap').addClass('password-wrap');
+                onOff=!onOff;
+            }else {
+                $('.login-wrap').removeClass('password-wrap').addClass('scan-code-wrap');
+                onOff=!onOff;
+            }
+        })
+    })
+</script>
+</body>
+</html>

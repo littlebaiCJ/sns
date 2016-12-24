@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<a href="#" style="position: absolute; top:0; z-index: 1000;">点我点我</a>
+<p style="position: absolute; top:0; z-index: 1000; right: 0;">CLCK</p>
+    <div class="dolls-animate dolls-animateIn">
+        
+    </div>
+    <script src="jquery-1.11.0.min.js">
+
+    </script>
+
+<script>
+    $(function(){
+        $('a').click(function (){
+            $('.dolls-animate').removeClass('dolls-animateIn').addClass('dolls-animateIng');
+        })
+        $('p').click(function (){
+            $('.dolls-animate').removeClass('dolls-animateIng').addClass('dolls-animateOut');
+        })
+    })
+</script>
+</body>
+</html>

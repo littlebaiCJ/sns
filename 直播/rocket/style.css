@@ -1,0 +1,65 @@
+/*reset*/
+html { -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; -webkit-user-select:none; user-select:none;}
+body { border:0;}
+html,body,ul,ol,img,p,input,button { margin:0; padding:0;}
+html,body { width: 100%; height: 100%; font-size:100%; font-family:simsun,STSong, "Helvetica Neue", Helvetica, STHeiTi, sans-serif; overflow-y: scroll;}
+img { display:block;}
+
+input,textarea{ -webkit-user-select:text; -ms-user-select:text; user-select:text; -webkit-appearance:none;}
+button { font-family: inherit; font-size: 100%; margin: 0; *font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;}
+
+ul, ol { list-style-type:none;}
+/* Removes webkit border when the element is on focus */
+a, a:active, a:focus, button, button:active, input, input:focus, select, select:focus, textarea, textarea:focus { outline:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0);}
+a { text-decoration:none; color:#000;}
+ol, ul {  padding-left:0; list-style:none;}
+
+.rocket-wrap{ width: 100%; height: 100%; overflow: hidden; position: relative; }
+.rocket{ position: absolute; bottom: -100%; overflow: hidden; width: 100%; height: 100%; background: url("img/1.png") no-repeat center; }
+.rocket-animateIn{ animation: rocket-animateIn 1s; -webkit-animation: rocket-animateIn 1s; animation-fill-mode: forwards; }
+.rocket-animateIng{ animation: rocket-animateIng 2s infinite; -webkit-animation: rocket-animateIng 2s infinite; }
+.rocket-animateOut{ animation: rocket-animateOut 1s; -webkit-animation: rocket-animateOut 1s; }
+
+@keyframes rocket-animateIn{
+0%{ bottom: -100%; background: url("img/1.png") no-repeat center; }
+100%{ bottom: 0; background: url("img/2.png")  no-repeat center; }
+}
+@keyframes rocket-animateIng{
+0%{  bottom: 0; background: url("img/1.png") no-repeat center; }
+10%{ bottom: 0; background: url("img/2.png") no-repeat center; }
+20%{ bottom: 0; background: url("img/1.png") no-repeat center; }
+30%{ bottom: 0; background: url("img/2.png") no-repeat center; }
+50%{ bottom: 0; background: url("img/2.png") no-repeat center; }
+60%{ bottom: 0; background: url("img/1.png") no-repeat center; }
+70%{  bottom: 0; background: url("img/1.png") no-repeat center; }
+80%{ bottom: 0;  background: url("img/2.png") no-repeat center; }
+90%{ bottom: 0;  background: url("img/3.png") no-repeat center; }
+100%{ bottom: 0;  background: url("img/3.png") no-repeat center; }
+}
+@keyframes rocket-animateOut{
+0%{ bottom: -10%; background: url("img/1.png") no-repeat center; }
+100%{ background: url("img/3.png") no-repeat center; bottom: 100%; }
+}
+@media screen and (max-height: 608px){
+.rocket{ background-size: 100%; }
+@keyframes rocket-animateIn{
+0%{ bottom: -100%; background: url("img/1.png") no-repeat center; background-size: 100%; }
+100%{ bottom: 0; background: url("img/2.png")  no-repeat center; background-size: 100%; }
+}
+@keyframes rocket-animateIng{
+0%{  bottom: 0; background: url("img/1.png") no-repeat center; background-size: 100%; }
+10%{ bottom: 0; background: url("img/2.png") no-repeat center; background-size: 100%; }
+20%{ bottom: 0; background: url("img/1.png") no-repeat center; background-size: 100%; }
+30%{ bottom: 0; background: url("img/2.png") no-repeat center; background-size: 100%; }
+50%{ bottom: 0; background: url("img/2.png") no-repeat center; background-size: 100%; }
+60%{ bottom: 0; background: url("img/1.png") no-repeat center; background-size: 100%; }
+70%{  bottom: 0; background: url("img/1.png") no-repeat center; background-size: 100%; }
+80%{ bottom: 0;  background: url("img/2.png") no-repeat center; background-size: 100%; }
+90%{ bottom: 0;  background: url("img/3.png") no-repeat center; background-size: 100%; }
+100%{ bottom: 0;  background: url("img/3.png") no-repeat center; background-size: 100%; }
+}
+@keyframes rocket-animateOut{
+0%{ bottom: -10%; background: url("img/1.png") no-repeat center; background-size: 100%; }
+100%{ background: url("img/3.png") no-repeat center; background-size: 100%; bottom: 100%; }
+}
+}

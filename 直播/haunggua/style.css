@@ -1,0 +1,148 @@
+html { -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; -webkit-user-select:none; user-select:none;}
+body { border:0; }
+html,body,ul,ol,img,p,input,button { margin:0; padding:0;}
+html,body { width: 100%; height: 100%; font-size:100%; font-family:simsun,STSong, "Helvetica Neue", Helvetica, STHeiTi, sans-serif; overflow: hidden;}
+img { display:block;}
+input,textarea{ -webkit-user-select:text; -ms-user-select:text; user-select:text; -webkit-appearance:none;}
+button { font-family: inherit; font-size: 100%; margin: 0; *font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;}
+ul, ol { list-style-type:none;}
+/* Removes webkit border when the element is on focus */
+a, a:active, a:focus, button, button:active, input, input:focus, select, select:focus, textarea, textarea:focus { outline:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0);}
+a { text-decoration:none; color:#000;}
+ol, ul {  padding-left:0; list-style:none;}
+.flex{display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */ display: -moz-box; /* Firefox 17- */ display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */ display: -moz-flex; /* Firefox 18+ */ display: -ms-flexbox; /* IE 10 */ display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */}
+.hide{ display: none; }
+a{ display:block; position: absolute; z-index:999; top: 0; width: 100px; height: 30px; text-align: center; font-size: 18px; line-height: 30px; text-decoration: none; border-radius: 5px; background: deepskyblue; color: #fff; }
+
+.cucumber-animate{ position: absolute; animation: cucumber-animate 5s; left: -100%; width: 100%; height: 100%; overflow: hidden; background: url("img/hg-c.png") no-repeat center; background-size: auto 90%; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; backface-visibility: hidden; }
+.cucumber-animateIn{  animation: cucumber-animateIn 4s; -webkit-animation: cucumber-animateIn 4s; animation-fill-mode: forwards; }
+.cucumber-animateIng{  animation: cucumber-animateIng 1s infinite; -webkit-animation: cucumber-animateIng 1s infinite; }
+.cucumber-animateOut{  animation: cucumber-animateOut .5s; -webkit-animation: cucumber-animateOut .5s; }
+
+@-webkit-keyframes cucumber-animateIn{
+0%{  left: -100%; transform: rotate(30deg); }
+10%{ left: -50%; background: url("img/hg-c.png") no-repeat center; transform: rotate(30deg);background-size: auto 90%; }
+12%{ background: url("img/hg-o.png") no-repeat center; background-size: auto 90%; }
+14%{ background: url("img/hg-c.png") no-repeat center; background-size: auto 90%; }
+16%{ background: url("img/hg-o.png") no-repeat center; background-size: auto 90%; }
+35%{ left: -50%; transform: rotate(30deg); }
+50%{ left: 0; transform: rotate(0deg); }
+52%{ transform: rotate(25deg); }
+54%{ transform: rotate(-15deg); }
+56%{ transform: rotate(10deg); }
+58%{ transform: rotate(-5deg); }
+60%{ transform: rotate(0deg); }
+70%{ background: url("img/hg-o.png") no-repeat center; background-size: auto 90%;}
+72%{ background: url("img/hg-c.png") no-repeat center; background-size: auto 90%;}
+74%{ background: url("img/hg-o.png") no-repeat center; background-size: auto 90%;}
+76%{ background: url("img/hg-c.png") no-repeat center; background-size: auto 90%;}
+78%{ background: url("img/hg-o.png") no-repeat center; background-size: auto 90%;}
+100%{ left: 0; background: url("img/hg-o.png") no-repeat center; background-size: auto 90%;}
+}
+
+@-webkit-keyframes cucumber-animateIng{
+0%{ left: 0; background: url("img/hg-o.png") no-repeat center; background-size: auto 90%; }
+25%{ left: 0; transform: rotate(15deg);}
+75%{ left: 0; transform: rotate(-15deg);}
+100%{ left: 0; background: url("img/hg-o.png") no-repeat center; background-size: auto 90%; }
+}
+@-webkit-keyframes cucumber-animateOut{
+0%{ left: 0; opacity: 1; }
+100%{ left: 0; background: url("img/hg-o.png") no-repeat center; background-size: auto 90%; opacity: 0; }
+}
+@keyframes cucumber-animateIn{
+0%{  left: -100%; transform: rotate(30deg); }
+10%{ left: -50%; background: url("img/hg-c.png") no-repeat center; transform: rotate(30deg);background-size: auto 90%; background-size: auto 90%; }
+12%{ background: url("img/hg-o.png") no-repeat center; background-size: auto 90%; }
+14%{ background: url("img/hg-c.png") no-repeat center; background-size: auto 90%; }
+16%{ background: url("img/hg-o.png") no-repeat center; background-size: auto 90%; }
+35%{ left: -50%; transform: rotate(30deg); }
+50%{ left: 0; transform: rotate(0deg); }
+52%{ transform: rotate(25deg); }
+54%{ transform: rotate(-15deg); }
+56%{ transform: rotate(10deg); }
+58%{ transform: rotate(-5deg); }
+60%{ transform: rotate(0deg); }
+70%{ background: url("img/hg-o.png") no-repeat center; background-size: auto 90%; }
+72%{ background: url("img/hg-c.png") no-repeat center; background-size: auto 90%; }
+74%{ background: url("img/hg-o.png") no-repeat center; background-size: auto 90%; }
+76%{ background: url("img/hg-c.png") no-repeat center; background-size: auto 90%; }
+78%{ background: url("img/hg-o.png") no-repeat center; background-size: auto 90%; }
+100%{ left: 0; background: url("img/hg-o.png") no-repeat center; background-size: auto 90%;  }
+}
+
+@keyframes cucumber-animateIng{
+0%{ left: 0; background: url("img/hg-o.png") no-repeat center; background-size: auto 90%; }
+25%{ left: 0; transform: rotate(15deg);}
+75%{ left: 0; transform: rotate(-15deg);}
+100%{ left: 0; background: url("img/hg-o.png") no-repeat center; background-size: auto 90%; }
+}
+@keyframes cucumber-animateOut{
+0%{ left: 0; opacity: 1; }
+100%{ left: 0; background: url("img/hg-o.png") no-repeat center; background-size: auto 90%; opacity: 0; }
+}
+@media screen and (max-width: 1024px ){
+.cucumber-animate{ background-size: 100%; }
+@-webkit-keyframes cucumber-animate{
+0%{  left: -100%; transform: rotate(30deg); }
+10%{ left: -50%; background: url("img/hg-c.png") no-repeat center; background-size: 100%; transform: rotate(30deg); }
+12%{ background: url("img/hg-o.png") no-repeat center; background-size: 100%; }
+14%{ background: url("img/hg-c.png") no-repeat center; background-size: 100%; }
+16%{ background: url("img/hg-o.png") no-repeat center; background-size: 100%; }
+35%{ left: -50%; transform: rotate(30deg); }
+50%{ left: 0; transform: rotate(0deg); }
+52%{ transform: rotate(25deg); }
+54%{ transform: rotate(-15deg); }
+56%{ transform: rotate(10deg); }
+58%{ transform: rotate(-5deg); }
+60%{ transform: rotate(0deg); }
+70%{ background: url("img/hg-o.png") no-repeat center; background-size: 100%; }
+72%{ background: url("img/hg-c.png") no-repeat center; background-size: 100%; }
+74%{ background: url("img/hg-o.png") no-repeat center; background-size: 100%; }
+76%{ background: url("img/hg-c.png") no-repeat center; background-size: 100%; }
+78%{ background: url("img/hg-o.png") no-repeat center; background-size: 100%; }
+100%{ left: 0; background: url("img/hg-o.png") no-repeat center; background-size: 100%; }
+}
+
+@-webkit-keyframes cucumber-animateIng{
+0%{ left: 0; background: url("img/hg-o.png") no-repeat center; background-size: 100%; }
+25%{ left: 0; transform: rotate(15deg);}
+75%{ left: 0; transform: rotate(-15deg);}
+100%{ left: 0; background: url("img/hg-o.png") no-repeat center; background-size: 100%; }
+}
+@-webkit-keyframes cucumber-animateOut{
+0%{ left: 0; opacity: 1; }
+100%{ left: 0; background: url("img/hg-o.png") no-repeat center; background-size: 100%; opacity: 0; }
+}
+@keyframes cucumber-animateIn{
+0%{  left: -100%; transform: rotate(30deg); }
+10%{ left: -50%; background: url("img/hg-c.png") no-repeat center; background-size: 100%; transform: rotate(30deg); }
+12%{ background: url("img/hg-o.png") no-repeat center; background-size: 100%; }
+14%{ background: url("img/hg-c.png") no-repeat center; background-size: 100%; }
+16%{ background: url("img/hg-o.png") no-repeat center; background-size: 100%; }
+35%{ left: -50%; transform: rotate(30deg); }
+50%{ left: 0; transform: rotate(0deg); }
+52%{ transform: rotate(25deg); }
+54%{ transform: rotate(-15deg); }
+56%{ transform: rotate(10deg); }
+58%{ transform: rotate(-5deg); }
+60%{ transform: rotate(0deg); }
+70%{ background: url("img/hg-o.png") no-repeat center; background-size: 100%; }
+72%{ background: url("img/hg-c.png") no-repeat center; background-size: 100%; }
+74%{ background: url("img/hg-o.png") no-repeat center; background-size: 100%; }
+76%{ background: url("img/hg-c.png") no-repeat center; background-size: 100%; }
+78%{ background: url("img/hg-o.png") no-repeat center; background-size: 100%; }
+100%{ left: 0; background: url("img/hg-o.png") no-repeat center; background-size: 100%; }
+}
+
+@keyframes cucumber-animateIng{
+0%{ left: 0; background: url("img/hg-o.png") no-repeat center; background-size: 100%; }
+25%{ left: 0; transform: rotate(15deg);}
+75%{ left: 0; transform: rotate(-15deg);}
+100%{ left: 0; background: url("img/hg-o.png") no-repeat center; background-size: 100%; }
+}
+@keyframes cucumber-animateOut{
+0%{ left: 0; opacity: 1; }
+100%{ left: 0; background: url("img/hg-o.png") no-repeat center; background-size: 100%; opacity: 0; }
+}
+}

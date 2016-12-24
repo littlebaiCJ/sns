@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>sns</title>
+    <link rel="stylesheet" type="text/css" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" type="text/css" href="css/chat_default.css?v=3">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+</head>
+<body>
+
+<!--公屏 start-->
+<div class="public-screen">
+    <div class="public-screen-content">
+        <!--<span class="online-num">300人在线</span>-->
+        <div class="pm-header flex">
+            <!--正在私聊好友-->
+            <ul class="pm-user-list">
+                <li><img src="images/tx4.jpg" alt=""><span>2</span></li>
+                <li><img src="images/tx4.jpg" alt=""></li>
+                <li><img src="images/tx4.jpg" alt=""></li>
+                <li><img src="images/tx4.jpg" alt=""></li>
+                <li><img src="images/tx4.jpg" alt=""></li>
+                <li><img src="images/tx4.jpg" alt=""></li>
+                <li><img src="images/tx4.jpg" alt=""></li>
+                <li><img src="images/tx4.jpg" alt=""></li>
+            </ul>
+            <!--土豪榜入口-->
+            <div class="back-warp">
+                <p><span class="iconfont icon-jiangbei2"></span></p>
+            </div>
+        </div>
+        <!--小喇叭-->
+        <div class="little-horn">
+            <canvas id="canvas"></canvas>
+            <img src="images/tx4.jpg" alt=""> <span class="horn-name">Cl彩林</span>
+            <p class="horn-text">人生若只如初见，何事秋风悲画扇。 —— 纳兰性德《木兰词·拟古决绝词柬友》</p>
+            <span class="iconfont icon-bullhorn"></span> <span class="horn-time">10秒前</span>
+        </div>
+        <!--聊天部分-->
+        <div class="chat-content">
+            <div data-page="messages" class="page toolbar-fixed page-on-center">
+                <div class="page-content messages-content">
+                    <div class="messages messages-auto-layout">
+                        <div class="message message-received message-with-avatar message-last message-with-tail message-first">
+                            <div class="message-name">Kate</div>
+                            <div class="message-text">人生若只如初见，何事秋风悲画扇。 —— 纳兰性德《木兰词·拟古决绝词柬友》</div>
+                            <div class="message-avatar" style="background-image:url(images/tx.jpg)"></div>
+                        </div>
+                        <div class="message message-sent message-pic message-with-avatar message-appear-from-bottom self-gift-message message-last message-with-tail message-first">
+                            <div class="message-name">阿里里阿里里
+                                <div style="display: none;" class="member" data-member_id="22" data-nickname="阿里里阿里里"></div>
+                            </div>
+                            <div class="message-text">
+                                <img src="images/tx.jpg">
+                            </div>
+                            <div class="message-avatar" style="background-image:url(http://img2.stxldm.com/sns_jb/uploads/headimg/14783162132848011.jpg@!headimg)"></div>
+                            <div class="message-label">11:22:45</div>
+                        </div>
+                        <div class="message message-sent  message-with-avatar message-appear-from-bottom self-gift-message message-last message-with-tail message-first">
+                            <div class="message-name">阿里里阿里里
+                                <div style="display: none;" class="member" data-member_id="22" data-nickname="阿里里阿里里"></div>
+                            </div>
+                            <div class="message-text">fsd</div>
+                            <div class="message-avatar" style="background-image:url(http://img2.stxldm.com/sns_jb/uploads/headimg/14783162132848011.jpg@!headimg)"></div>
+                            <div class="message-label">11:28:59</div>
+                        </div>
+                        <div class="message message-received message-with-avatar message-last message-with-tail message-first">
+                            <div class="message-name">Kate</div>
+                            <div class="message-text">人生若只如初见，何事秋风悲画扇。 —— 纳兰性德《木兰词·拟古决绝词柬友》</div>
+                            <div class="message-avatar" style="background-image:url(images/tx.jpg)"></div>
+                        </div>
+                        <div class="message message-received message-with-avatar message-last message-with-tail message-first gift-chat-message">
+                            <div class="message-name">Kate</div>
+                            <div class="message-text">送木木木</div>
+                            <div class="message-avatar" style="background-image:url(images/tx.jpg)"></div>
+                            <div class="g-wine">
+                                <img src="images/wine_s.png" alt="">
+                                <strong>x1</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toolbar messagebar">
+        <!--发送栏-->
+        <div class="toolbar-inner">
+            <a href="#" class="link send-horn"><i class="iconfont icon-bullhorn"></i></a>
+            <textarea placeholder=""></textarea>
+            <a href="#" class="link send-message"><i class="iconfont icon-xiayige"></i></a>
+        </div>
+    </div>
+    <!--图标列表-->
+    <ul class="icon-bar flex hide">
+        <li><span class="iconfont icon-1"></span></li>
+        <li><span class="iconfont icon-iconfontcolor15"></span></li>
+        <li><span class="iconfont icon-liwu"></span></li>
+        <li><span class="iconfont icon-bullhorn"></span><i>123</i></li>
+        <li><span class="iconfont icon-shezhi"></span></li>
+        <li><span class="iconfont icon-kehu"></span></li>
+    </ul>
+    <!--礼物赠送数量-->
+    <div class="gift-classify hide">
+        <img src="images/tx4.jpg" alt=""> <span class="g-name">木木送玻璃猫</span>
+        <span class="g-num">1辆超跑</span>
+        <div class="g-img-num g-rocket">
+            <img src="images/rocket_s.png" alt="">
+            <strong>x1</strong>
+        </div>
+    </div>
+    <div class="little-redpacket flip">
+
+    </div>
+    <div class="open-redpacket hide">
+        <div class="open-redpacket-content">
+            <span class="close-ico"><i class="iconfont icon-guanbi"></i></span>
+            <div class="send-redpacket-user">
+                <div class="name-avatar">
+                    <img src="images/tx4.jpg" alt="">
+                    <p><i>哈哈哈</i><i>的黑包</i></p>
+                </div>
+                <p class="amount">￥66.66</p>
+                <p class="tips">已存入您的可提现金额中</p>
+                <ul class="grab-user">
+                    <li>
+                        <img src="images/tx4.jpg" alt="">
+                        <p><i>哈哈</i><i>￥66.66</i></p>
+                    </li>
+                    <li>
+                        <img src="images/tx4.jpg" alt="">
+                        <p><i>哈哈</i><i>￥66.66</i></p>
+                    </li>
+                    <li>
+                        <img src="images/tx4.jpg" alt="">
+                        <p><i>哈哈</i><i>￥66.66</i></p>
+                    </li>
+                    <li>
+                        <img src="images/tx4.jpg" alt="">
+                        <p><i>哈哈</i><i>￥66.66</i></p>
+                    </li>
+                    <li>
+                        <img src="images/tx4.jpg" alt="">
+                        <p><i>哈哈</i><i>￥66.66</i></p>
+                    </li>
+                    <li>
+                        <img src="images/tx4.jpg" alt="">
+                        <p><i>哈哈</i><i>￥66.66</i></p>
+                    </li>
+                    <li>
+                        <img src="images/tx4.jpg" alt="">
+                        <p><i>哈哈</i><i>￥66.66</i></p>
+                    </li>
+                    <li>
+                        <img src="images/tx4.jpg" alt="">
+                        <p><i>哈哈</i><i>￥66.66</i></p>
+                    </li>
+                    <li>
+                        <img src="images/tx4.jpg" alt="">
+                        <p><i>哈哈</i><i>￥66.66</i></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="send-redpacket hide">
+        <div class="send-redpacket-content">
+            <span class="close-ico"><i class="iconfont icon-guanbi"></i></span>
+            <label>红包名称:</label>
+            <input type="text" value="恭喜发财"/>
+            <label>发多少个:</label>
+            <input type="number" value="10"/>
+            <label>塞多少钱进红包:</label>
+            <input id="inputid" type="number"/>
+            <a class="send-redpacket-btn">發</a>
+        </div>
+    </div>
+</div>
+<!--公屏 end-->
+<!--客户列表 start-->
+<div class="user-list hide">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left">
+                <a href="#" class="link icon-only">
+                    <i class="iconfont icon-shangyige"></i>
+                </a>
+            </div>
+            <div class="center">客户列表</div>
+            <div class="right">
+                <a href="#" class="link icon-only">
+                    <i class="iconfont icon-shaixuanshaixuan"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="user-list-content">
+        <ul class="user-list-group">
+            <li class="flex">
+                <span><img src="images/tx1.jpg" alt=""></span>
+                <div class="name-line">
+                    <div>
+                        <span class="name">玻璃猫</span><span class="sex girl"><i class="iconfont icon-5"></i>27</span>
+                    </div>
+                    <div>
+                        当前在线 <span class="online"><i class="iconfont icon-liaotian"></i></span>
+                    </div>
+                </div>
+            </li>
+            <li class="flex">
+                <span><img src="images/tx1.jpg" alt=""></span>
+                <div class="name-line">
+                    <div>
+                        <span class="name">玻璃猫</span><span class="sex girl"><i class="iconfont icon-5"></i>27</span>
+                    </div>
+                    <div>
+                        当前在线 <span class="online"><i class="iconfont icon-liaotian"></i></span>
+                    </div>
+                </div>
+            </li>
+            <li class="flex">
+                <span><img src="images/tx1.jpg" alt=""></span>
+                <div class="name-line">
+                    <div>
+                        <span class="name">玻璃猫</span><span class="sex girl"><i class="iconfont icon-5"></i>27</span>
+                    </div>
+                    <div>
+                        当前在线 <span class="online"><i class="iconfont icon-liaotian"></i></span>
+                    </div>
+                </div>
+            </li>
+            <li class="flex">
+                <span><img src="images/tx1.jpg" alt=""></span>
+                <div class="name-line">
+                    <div>
+                        <span class="name">玻璃猫</span><span class="sex girl"><i class="iconfont icon-5"></i>27</span>
+                    </div>
+                    <div>
+                        当前在线<span class="online"><i class="iconfont icon-liaotian"></i></span>
+                    </div>
+                </div>
+            </li>
+            <li class="flex">
+                <span><img src="images/tx1.jpg" alt=""></span>
+                <div class="name-line">
+                    <div>
+                        <span class="name">玻璃猫</span><span class="sex girl"><i class="iconfont icon-5"></i>27</span>
+                    </div>
+                    <div>
+                        当前在线 <span class="online"><i class="iconfont icon-liaotian"></i></span>
+                    </div>
+                </div>
+            </li>
+            <li class="flex">
+                <span><img src="images/tx1.jpg" alt=""></span>
+                <div class="name-line">
+                    <div>
+                        <span class="name">玻璃猫</span><span class="sex girl"><i class="iconfont icon-5"></i>27</span>
+                    </div>
+                    <div>
+                        当前在线 <span class="online"><i class="iconfont icon-liaotian"></i></span>
+                    </div>
+                </div>
+            </li>
+            <li class="flex">
+                <span><img src="images/tx1.jpg" alt=""></span>
+                <div class="name-line">
+                    <div>
+                        <span class="name">玻璃猫</span><span class="sex girl"><i class="iconfont icon-5"></i>27</span>
+                    </div>
+                    <div>
+                        当前在线 <span class="online"><i class="iconfont icon-liaotian"></i></span>
+                    </div>
+                </div>
+            </li>
+            <li class="flex">
+                <span><img src="images/tx1.jpg" alt=""></span>
+                <div class="name-line">
+                    <div>
+                        <span class="name">玻璃猫</span><span class="sex girl"><i class="iconfont icon-5"></i>27</span>
+                    </div>
+                    <div>
+                        当前在线 <span class="online"><i class="iconfont icon-liaotian"></i></span>
+                    </div>
+                </div>
+            </li>
+            <li class="flex">
+                <span><img src="images/tx1.jpg" alt=""></span>
+                <div class="name-line">
+                    <div>
+                        <span class="name">玻璃猫</span><span class="sex girl"><i class="iconfont icon-5"></i>27</span>
+                    </div>
+                    <div>
+                        当前在线 <span class="online"><i class="iconfont icon-liaotian"></i></span>
+                    </div>
+                </div>
+            </li>
+            <li class="flex">
+                <span><img src="images/tx1.jpg" alt=""></span>
+                <div class="name-line">
+                    <div>
+                        <span class="name">玻璃猫</span><span class="sex girl"><i class="iconfont icon-5"></i>27</span>
+                    </div>
+                    <div>
+                        当前在线 <span class="online"><i class="iconfont icon-liaotian"></i></span>
+                    </div>
+                </div>
+            </li>
+            <li class="text-li flex">
+                <div class="name-line">
+                    <div>
+                        <span class="name">没有更多会员了</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--客户列表 end-->
+<!--设置年龄性别 srart-->
+<div class="setting-page hide">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left">
+                <a href="#" class="link icon-only">
+                    <i class="iconfont icon-shangyige"></i>
+                </a>
+            </div>
+            <div class="center">设置</div>
+            <div class="right">
+                <a class="link icon-only"></a>
+            </div>
+        </div>
+    </div>
+    <div class="sex-age-setting">
+        <span>设置性别和年龄</span>
+        <div class="sex-select">
+            <div class="iconfont icon-5  active"></div>
+            <div class="iconfont icon-81"></div>
+        </div>
+        <div class="select-age">
+            <input type="text" placeholder="选择日期" readonly="readonly" id="calendar-default"/>
+        </div>
+        <a href="#" class="next">下一步</a>
+        <a href="#" class="next skip">懒得弄,跳过</a>
+    </div>
+</div>
+<!--设置年龄性别 end-->
+<!--筛选 start-->
+<div class="screen-page hide">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left">
+                <a href="#" class="link icon-only">
+                    <i class="iconfont icon-shangyige"></i>
+                </a>
+            </div>
+            <div class="center">筛选</div>
+            <div class="right">
+                <a href="#" class="link icon-only">
+                    <i class="iconfont icon-home"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="screen-page-warp">
+        <div class="screen-content">
+            <div class="screen-sex">
+                <span class="title-text">性别</span>
+                <div class="sex-input">
+                    <label> <i class="iconfont icon-5 active"></i> <input type="radio" name="sex" checked/>
+                        <span>男</span> </label> <label> <i class="iconfont icon-81"></i>
+                    <input type="radio" name="sex"/> <span>女</span> </label> <label> <input type="radio" name="sex"/>
+                    <i class="iconfont icon-male8"></i> <span>不限</span> </label>
+                </div>
+                <div class="appear-time">
+                    <span class="title-text">出现时间</span>
+                    <p><span class="active">15分钟</span><span>1小时</span><span>1天</span><span>3天</span><span>不限</span></p>
+                    <input type="range" min="1" max="5" value="1"/>
+                </div>
+                <div class="age">
+                    <span class="title-text">年龄</span> <input type="number"/> <label>至</label> <input type="number"/>
+                    <label>岁</label>
+                </div>
+                <a href="#" class="next confirm">确定</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--筛选 end-->
+<!--设置首页 start-->
+<div class="setting-index hide">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left">
+                <a href="#" class="link icon-only">
+                    <i class="iconfont icon-shangyige"></i>
+                </a>
+            </div>
+            <div class="center">我的设置</div>
+            <div class="right">
+                <a class="link icon-only"></a>
+            </div>
+        </div>
+    </div>
+    <div class="setting-index-content">
+        <!--用户资料列表-->
+        <ul class="setting-header">
+            <li>
+                <a href="#">
+                    <img src="images/tx1.jpg" alt=""><span class="iconfont icon-xiangji"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>昵称</span><strong><i>Ailee李艺真</i><span class="iconfont icon-xiayige"></span></strong>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>年龄</span> <strong>24<span class="iconfont icon-xiayige"></span></strong>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>性别</span> <strong>女<span class="iconfont icon-xiayige"></span></strong>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>充值</span> <strong><span class="zs-content"><i>1</i><img src="images/zs_03.png" alt=""></span><span class="iconfont icon-xiayige"></span></strong>
+                </a>
+            </li>
+        </ul>
+        <!--底部照片相册-->
+        <div class="setting-footer">
+            <div class="setting-footer-title">
+                <span class="iconfont icon-iconfontcolor15"></span>
+            </div>
+            <ul class="album">
+                <li>
+                    <a href="#"><img src="images/tx1.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/tx1.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/hzw.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/long.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><span class="iconfont icon-jiajian02"></span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--设置首页 end-->
+<!--设置完成 start-->
+<div class="setting-complete hide">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left">
+                <a href="#" class="link icon-only">
+                    <i class="iconfont icon-shangyige"></i>
+                </a>
+            </div>
+            <div class="center">设置完成</div>
+            <div class="right">
+                <a class="link icon-only"></a>
+            </div>
+        </div>
+    </div>
+    <div class="setting-complete-content">
+        <span>设置完成,开始吧～</span>
+        <a href="#" class="next start">开 始 撩</a>
+        <div class="setting-album-data">
+            <span>您也可以先</span>
+            <a href="#" class="next">设置相册</a>
+            <a href="#" class="next">完善资料</a>
+        </div>
+    </div>
+    <div class="position-user">
+        <span>他们也在这里</span>
+        <!--附近用户列表-->
+        <ul>
+            <li><img src="images/tx1.jpg" alt=""></li>
+            <li><img src="images/tx1.jpg" alt=""></li>
+            <li><img src="images/tx.jpg" alt=""></li>
+            <li><img src="images/tx.jpg" alt=""></li>
+            <li><img src="images/tx1.jpg" alt=""></li>
+            <li><img src="images/tx1.jpg" alt=""></li>
+            <li><img src="images/tx1.jpg" alt=""></li>
+            <li><img src="images/tx1.jpg" alt=""></li>
+        </ul>
+    </div>
+</div>
+<!--设置完成 end-->
+<!--私聊 start-->
+<div class="private-message hide">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left">
+                <a href="#" class="link icon-only">
+                    <i class="iconfont icon-shangyige"></i>
+                </a>
+            </div>
+            <div class="center">用户名</div>
+            <div class="right">
+                <a class="link icon-only"><i class="iconfont icon-gengduo"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="pm-header flex">
+        <!--正在私聊好友-->
+        <ul class="pm-user-list">
+            <li><img src="images/tx.jpg" alt=""><span>2</span></li>
+            <li><img src="images/tx.jpg" alt=""></li>
+            <li><img src="images/tx.jpg" alt=""></li>
+            <li><img src="images/tx.jpg" alt=""></li>
+            <li><img src="images/tx.jpg" alt=""></li>
+            <li><img src="images/tx.jpg" alt=""></li>
+            <li><img src="images/tx.jpg" alt=""></li>
+            <li><img src="images/tx.jpg" alt=""></li>
+        </ul>
+        <!--返回公屏图标-->
+        <div class="back-warp">
+            <p><span class="iconfont icon-home"></span><i>1</i></p>
+        </div>
+    </div>
+    <!--私聊内容-->
+    <div class="pm-content">
+        <div data-page="messages" class="page toolbar-fixed page-on-center">
+            <div class="toolbar messagebar">
+                <div class="toolbar-inner">
+                    <a href="#" class="link icon-only"><i class="icon icon-camera"></i></a>
+                    <textarea></textarea>
+                    <a href="#" class="link send-message"><i class="iconfont icon-xiayige"></i></a>
+                </div>
+            </div>
+            <div class="page-content messages-content">
+                <div class="messages messages-auto-layout">
+                    <div class="messages-date">Sunday, Feb 9 <span>12:58</span></div>
+                    <div class="message message-sent">
+                        <div class="message-text">Hello</div>
+                    </div>
+                    <div class="message message-sent">
+                        <div class="message-text">How are you?</div>
+                    </div>
+                    <div class="message message-received">
+                        <div class="message-name">Kate</div>
+                        <div class="message-text">I am fine, thanks</div>
+                        <div style="background-image:url(images/tx.jpg)" class="message-avatar"></div>
+                    </div>
+                    <div class="messages-date">Sunday, Feb 3 <span>11:58</span></div>
+                    <div class="message message-sent">
+                        <div class="message-text">Nice photo?</div>
+                    </div>
+                    <div class="message message-sent message-pic">
+                        <div class="message-text"><img src="http://lorempixel.com/300/300/"></div>
+                        <div class="message-label">Delivered</div>
+                    </div>
+                    <div class="message message-received">
+                        <div class="message-name">Kate</div>
+                        <div class="message-text">Wow, awesome!</div>
+                        <div style="background-image:url(images/tx1.jpg)" class="message-avatar"></div>
+                    </div>
+                    <div class="message message-received" >
+                        <div class="message-name">Kate</div>
+                        <div class="message-text">Wow, awesome!</div>
+                        <div style="background-image:url(images/tx1.jpg)" class="message-avatar"></div>
+                    </div>
+                    <div class="message message-received">
+                        <div class="message-name">Kate</div>
+                        <div class="message-text">Wow, awesome!</div>
+                        <div style="background-image:url(images/tx1.jpg)" class="message-avatar"></div>
+                    </div>
+                    <div class="message message-received">
+                        <div class="message-name">Kate</div>
+                        <div class="message-text">Wow, awesome!</div>
+                        <div style="background-image:url(images/tx1.jpg)" class="message-avatar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--私聊 end-->
+<!--设置头像 start-->
+<div class="setting-head-portrait hide">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left">
+                <a href="#" class="link icon-only">
+                    <i class="iconfont icon-shangyige"></i>
+                </a>
+            </div>
+            <div class="center">设置头像</div>
+            <div class="right">
+                <a class="link icon-only"></a>
+            </div>
+        </div>
+    </div>
+    <div class="hp-content">
+        <img src="images/tx.jpg" alt="">
+        <a href="#" class="next">换头像</a>
+        <a href="#" class="next">下一步</a>
+        <a href="#" class="next skip">懒得弄,跳过</a>
+    </div>
+</div>
+<!--设置头像 end-->
+<!--设置昵称 start-->
+<div class="setting-name hide">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left">
+                <a href="#" class="link icon-only">
+                    <i class="iconfont icon-shangyige"></i>
+                </a>
+            </div>
+            <div class="center">设置昵称</div>
+            <div class="right">
+                <a class="link icon-only"></a>
+            </div>
+        </div>
+    </div>
+    <div class="enter-wrap">
+        <input type="search"/> <span class="iconfont icon-yonghu"></span>
+        <p class="tip"><span class="iconfont icon-zhuyi"></span>昵称不能超过20个字</p>
+    </div>
+    <a href="#" class="next">下一步</a>
+    <a href="#" class="next skip">懒得弄,跳过</a>
+</div>
+<!--设置昵称 end-->
+<!--购买小喇叭 start-->
+<div class="buy-laba hide">
+    <div class="in-bl">
+        <span class="close-ico"><i class="iconfont icon-guanbi"></i></span>
+        <h3>购买小喇叭</h3>
+        <ul>
+            <li class="row">
+                <div class="col-25">
+                    <span class="iconfont icon-bullhorn"></span> <i>x1</i>
+                </div>
+                <div class="col-50"><span>1个小喇叭</span><strong>5元</strong></div>
+                <div class="col-25"><input type="radio" name="horn"/></div>
+            </li>
+            <li class="row">
+                <div class="col-25">
+                    <span class="iconfont icon-bullhorn"></span> <i>x10</i>
+                </div>
+                <div class="col-50"><span>10个小喇叭(推荐)</span><strong>8元</strong></div>
+                <div class="col-25"><input type="radio" name="horn"/></div>
+            </li>
+            <li class="row">
+                <div class="col-25">
+                    <span class="iconfont icon-bullhorn"></span> <i>x20</i>
+                </div>
+                <div class="col-50"><span>20个小喇叭</span><strong>16元</strong></div>
+                <div class="col-25"><input type="radio" name="horn"/></div>
+            </li>
+        </ul>
+        <a href="#" class="next">购买</a>
+    </div>
+</div>
+<!--购买小喇叭 end-->
+<!--土豪榜 start-->
+<div class="rank-wrap hide">
+    <div class="in-rw">
+        <span class="close-ico"><i class="iconfont icon-guanbi"></i></span>
+        <span class="iconfont icon-huangguantongyidaxiao"></span>
+        <h3>土豪榜</h3>
+        <div class="top1">
+            <img src="images/tx.jpg" alt="">
+            <div class="top1-data">
+                <span class="iconfont icon-jiangbei2"></span> <span class="name-rmb">
+                        <i>玻璃猫charming</i>
+                        <i><span>RMB</span>1000</i>
+                </span>
+            </div>
+        </div>
+        <ul class="rank-list">
+            <li>
+                <i class="rank-num">1</i> <span>
+                    <img src="images/tx1.jpg" alt="">
+                </span> <span>
+                    <i>Bo木木</i>
+                    <i>960</i>
+                </span>
+            </li>
+            <li>
+                <i class="rank-num">1</i> <span>
+                    <img src="images/tx1.jpg" alt="">
+                </span> <span>
+                    <i>Bo木木</i>
+                    <i>960</i>
+                </span>
+            </li>
+            <li>
+                <i class="rank-num">1</i> <span>
+                    <img src="images/tx1.jpg" alt="">
+                </span> <span>
+                    <i>Bo木木</i>
+                    <i>960</i>
+                </span>
+            </li>
+            <li>
+                <i class="rank-num">1</i> <span>
+                    <img src="images/tx1.jpg" alt="">
+                </span> <span>
+                    <i>Bo木木</i>
+                    <i>960</i>
+                </span>
+            </li>
+            <li>
+                <i class="rank-num">1</i> <span>
+                    <img src="images/tx1.jpg" alt="">
+                </span> <span>
+                    <i>Bo木木</i>
+                    <i>960</i>
+                </span>
+            </li>
+            <li>
+                <i class="rank-num">1</i> <span>
+                    <img src="images/tx1.jpg" alt="">
+                </span> <span>
+                    <i>Bo木木</i>
+                    <i>960</i>
+                </span>
+            </li>
+            <li>
+                <i class="rank-num">1</i> <span>
+                    <img src="images/tx1.jpg" alt="">
+                </span> <span>
+                    <i>Bo木木</i>
+                    <i>960</i>
+                </span>
+            </li>
+            <li>
+                <i class="rank-num">1</i> <span>
+                    <img src="images/tx1.jpg" alt="">
+                </span> <span>
+                    <i>Bo木木</i>
+                    <i>960</i>
+                </span>
+            </li>
+            <li>
+                <i class="rank-num">1</i> <span>
+                    <img src="images/tx1.jpg" alt="">
+                </span> <span>
+                    <i>Bo木木</i>
+                    <i>960</i>
+                </span>
+            </li>
+            <li>
+                <i class="rank-num">1</i> <span>
+                    <img src="images/tx1.jpg" alt="">
+                </span> <span>
+                    <i>Bo木木</i>
+                    <i>960</i>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--土豪榜 end-->
+<!--礼物 start-->
+<div class="gift-wrap picker-modal">
+    <div class="gift-cover">
+        <div class="in-gift-wrap swiper-container">
+            <ul class="gift-list swiper-wrapper">
+                <li class="swiper-slide">
+                    <div class="cucumber active">
+                        <img src="images/cucumber.png" alt="">
+                        <span class="gift-price"><i>1</i><img src="images/zs_03.png" alt=""></span>
+                        <span class="gift-name">小黄瓜</span>
+                    </div>
+                    <div class="flower">
+                        <img src="images/flower.png" alt="">
+                        <span class="gift-price"><i>2￥</i></span>
+                        <span class="gift-name">小黄瓜</span>
+                    </div>
+                    <div class="candy">
+                        <img src="images/candy.png" alt="">
+                        <span class="gift-price"><i>5￥</i></span>
+                        <span class="gift-name">小黄瓜</span>
+                    </div>
+                    <div class="wine">
+                        <img src="images/wine.png" alt="">
+                        <span class="gift-price"><i>10￥</i></span>
+                        <span class="gift-name">小黄瓜</span>
+                    </div>
+                    <div class="doll">
+                        <img src="images/doll.png" alt="">
+                        <span class="gift-price"> <i>100￥</i></span>
+                        <span class="gift-name">小黄瓜</span>
+                    </div>
+                    <div class="plane">
+                        <img src="images/plane.png" alt="">
+                        <span class="gift-price"><i>200￥</i></span>
+                        <span class="gift-name">小黄瓜</span>
+                    </div>
+                    <div class="car">
+                        <img src="images/car.png" alt="">
+                        <span class="gift-price"><i>300￥</i></span>
+                        <span class="gift-name">小黄瓜</span>
+                    </div>
+                    <div class="rocket">
+                        <img src="images/rocket.png" alt="">
+                        <span class="gift-price"><i>400￥</i></span>
+                        <span class="gift-name">小黄瓜</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="gift-bottom">
+            <div class="recharge"><!--礼物充值部分-->
+                <a href="#">
+                    <span>充值: 0</span> <img src="images/zs_03.png" alt=""><i class="iconfont icon-xiayige"></i>
+                </a>
+            </div>
+            <a href="#" class="send">发送</a>
+        </div>
+    </div>
+</div>
+<!--礼物 end-->
+<!--资料 start-->
+<div class="data-page hide">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left">
+                <a href="#" class="link icon-only">
+                    <i class="iconfont icon-shangyige"></i>
+                </a>
+            </div>
+            <div class="center">资料</div>
+            <div class="right">
+                <a class="link icon-only"></a>
+            </div>
+        </div>
+    </div>
+    <!--照片墙-->
+    <div class="data-page-header">
+        <img src="images/tx4.jpg" alt=""> <img src="images/tx1.jpg" alt=""> <img src="images/tx2.jpg" alt="">
+        <img src="images/tx3.jpg" alt=""> <img src="images/tx.jpg" alt=""> <img src="images/tx5.jpg" alt="">
+    </div>
+    <!--用户头像、昵称、性别-->
+    <div class="user-data flex">
+        <div class="data-head-portrait">
+            <img src="images/tx3.jpg" alt="">
+        </div>
+        <div class="data-name-position">
+            <p><span class="user-name">李艺真</span><span class="sex"><i class="iconfont icon-81"></i>27</span></p>
+            <p><span class="iconfont icon-dingwei"></span>他也在这里</p>
+        </div>
+    </div>
+    <!--点赞、返回首公屏、私聊小图标-->
+    <div class="footer-ico flex">
+        <a href="#" class="iconfont icon-xin"></a>
+        <a href="#" class="iconfont icon-1"></a>
+        <a href="#" class="iconfont icon-home"></a>
+    </div>
+</div>
+<!--资料 end-->
+<!--购买礼物 start-->
+<div class="buy-gift hide">
+    <div class="in-bg">
+        <span class="close-ico"><i class="iconfont icon-guanbi"></i></span>
+        <h3>赠送小黄瓜</h3>
+        <p class="buy-text"><span class="iconfont icon-liwu col-15"></span>请输入赠送数量:</p>
+        <a href="#">-</a>
+        <input type="number"/>
+        <a href="#">+</a>
+        <span class="spend">需要花费: 0元</span>
+        <a href="#" class="next">购买</a>
+    </div>
+</div>
+<!--购买礼物 end-->
+
+<!-----------------------------------动画页面--------------------------------------->
+<!--黄瓜动画 start-->
+<!--<span class="gift-num">×5</span>
+<p class="gift-text">某某某送某某某黄瓜某某某送某某某黄瓜某某</p>-->
+<div class="cucumber-animate-wrap hide">
+    <div id="ani" class="cucumber-animate cucumber-animateIn"></div>
+</div>
+<!--火箭动画 start-->
+<div class="rocket-animate-wrap hide">
+    <div class="rocket-animate rocket-animateIn"></div>
+</div>
+<!--啤酒动画 start-->
+<div class="wine-animate-wrap hide">
+    <div class="wine-animate wine-animateIn"></div>
+</div>
+<!--飞机动画 start-->
+<div class="plane-animate hide">
+    <img class="ani" src="images/plane/plane.png" alt="">
+</div>
+<!--小熊动画 start-->
+<div class="dolls-animate-wrap hide">
+    <div class="dolls-animate dolls-animateIng"></div>
+</div>
+<!--甜甜圈动画 start-->
+<div class="ttq-animate hide">
+    <img src="images/ttq/ttq.png" alt="">
+</div>
+
+<!--礼物赠送信息 start-->
+<div class="sender hide">
+    <img src="images/tx.jpg" alt="">
+    <p><span class="sender-name">里</span></p>
+</div>
+<p class="song-word hide">送</p>
+<div class="gainer hide">
+    <p><span class="gainer-name">穆亩</span></p>
+    <img src="images/tx.jpg" alt="">
+</div>
+<script src="js/framework7.min.js"></script>
+<script src="js/rem.js"></script>
+<script src="js/jquery-1.11.0.min.js"></script>
+<!--<script src="js/easyBackground-min.js"></script>-->
+<script src="js/canvas.js"></script>
+<script>
+    var myApp = new Framework7();
+    var $$ = Dom7;
+    var calendarDefault = myApp.calendar({
+        input : '#calendar-default'
+    });
+    var mySwiper = myApp.swiper('.swiper-container', {
+        pagination : '.swiper-pagination'
+    });
+    $$('.icon-xin').on('click', function(){
+        myApp.pickerModal('.picker-modal')
+    })
+    $$('.gift-wrap').on('click', function(event){
+        myApp.closeModal('.picker-modal');
+    });
+    $$('.gift-cover').on('click', function(event){
+        event.stopPropagation();
+    });
+    $$('.cucumber-animate-wrap').click(function(){
+        if($$(this).hasClass('paused-animate')){
+            $$(this).removeClass('paused-animate');
+        } else {
+            $$(this).addClass('paused-animate');
+        }
+    })
+    $$('.ani').on('animationend', function(){
+        $$(this).parent().addClass('hide');
+    }, false);
+    /*
+     $(function(){
+     $('.little-horn').easyBackground({
+     warpNeighbours : true
+     });
+     });*/
+</script>
+<script>
+    $(function(){
+        $('.little-redpacket').on('webkitAnimationEnd',function(){
+            $('div.little-redpacket').removeClass('flip').addClass('tada');
+        })
+    })
+</script>
+</body>
+</html>

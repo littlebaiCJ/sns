@@ -1,0 +1,25 @@
+html { -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; -webkit-user-select:none; user-select:none;}
+body { border:0;}
+html,body,ul,ol,img,p,input,button { margin:0; padding:0;}
+html,body { width: 100%; height: 100%; font-size:100%; font-family:simsun,STSong, "Helvetica Neue", Helvetica, STHeiTi, sans-serif; overflow-y: scroll;}
+img { display:block;}
+
+input,textarea{ -webkit-user-select:text; -ms-user-select:text; user-select:text; -webkit-appearance:none;}
+button { font-family: inherit; font-size: 100%; margin: 0; *font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;}
+
+ul, ol { list-style-type:none;}
+/* Removes webkit border when the element is on focus */
+a, a:active, a:focus, button, button:active, input, input:focus, select, select:focus, textarea, textarea:focus { outline:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0);}
+a { text-decoration:none; color:#000;}
+ol, ul {  padding-left:0; list-style:none;}
+
+.login-content{ width: 100%; height: 100%; background: #efeef3; }
+.login-content .avatar{ padding-top: 20%; }
+.login-content .avatar img{ width: 30%; border-radius: 50%; margin: 0 auto; }
+.login-content .tip{ width: 50%; font-size: .5rem; text-align: center; margin: 0 auto; padding-top: 1rem; }
+.login-content .status{ font-size: 0; text-align: center;  padding-top: .8rem; }
+.login-content .status img{ display: inline-block; width: .8rem; height: .8rem; vertical-align: middle; }
+.login-content .status span{  font-size: .5rem; display: inline-block; vertical-align: middle; }
+.login-content .btn-wrap a{ display: block; width: 90%; margin:0 auto; border-radius: .1rem; font-size: .5rem; text-align: center; padding: .2rem 0; }
+.login-content .btn-wrap a:first-of-type{ background: #56bb37; color: #FFF; margin-top: 20%; }
+.login-content .btn-wrap a:nth-of-type(2){ background: #FFF; color: #000; margin-top: .25rem;  }
